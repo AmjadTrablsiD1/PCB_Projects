@@ -34,6 +34,45 @@
 		(45 "User.4" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -129,14 +168,6 @@
 	(net 48 "unconnected-(U1-CMD-Pad18)")
 	(net 49 "unconnected-(U1-G17-Pad30)")
 	(net 50 "unconnected-(U1-G18-Pad28)")
-	(net 51 "unconnected-(U2-XCL-Pad6)")
-	(net 52 "unconnected-(U2-VCC-Pad1)")
-	(net 53 "unconnected-(U2-SCL-Pad3)")
-	(net 54 "unconnected-(U2-ADO-Pad7)")
-	(net 55 "unconnected-(U2-SDA-Pad4)")
-	(net 56 "unconnected-(U2-INT-Pad8)")
-	(net 57 "unconnected-(U2-GND-Pad2)")
-	(net 58 "unconnected-(U2-XDA-Pad5)")
 	(footprint "Library_Amjad:ESP_32_socket"
 		(layer "F.Cu")
 		(uuid "181da4ac-4cb6-42a7-a81c-dba7ccb5901e")
@@ -828,177 +859,6 @@
 			)
 		)
 	)
-	(footprint "Amjad_lib:MPU_6050_bord"
-		(layer "F.Cu")
-		(uuid "747420d4-4925-4460-8602-007ace3d1f43")
-		(at 122.4 62.1)
-		(property "Reference" "U2"
-			(at -6.4 -7.884 0)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "cda6174c-c05a-44f1-8fc1-a479aab721b9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at -6.4 -5.852 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(uuid "8c6162a2-01a7-4e68-85ed-cca120d3486f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at -6.4 3.8 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "8236a5ac-2823-45fb-b8ae-947da1d9e513")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at -6.4 3.8 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "106b4d5f-aba3-4c47-9a71-56bd70bb4d65")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/a61cceaf-9a51-46e5-9d11-00d0ac7410b1")
-		(sheetname "/")
-		(sheetfile "RC_v2_ESP32.kicad_sch")
-		(attr smd)
-		(fp_rect
-			(start -13.9 -1.1)
-			(end 1.1 18.9)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "1c8a8d60-b15f-431b-adf9-ec23ed0ac315")
-		)
-		(fp_text user "${REFERENCE}"
-			(at -6.4 -4.328 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(uuid "d05f1ced-feba-4668-b14c-c1e035e872b1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole oval
-			(at 0 0)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 52 "unconnected-(U2-VCC-Pad1)")
-			(pinfunction "VCC")
-			(pintype "input")
-			(uuid "16b40845-dc0f-4391-ad63-94ec7d60918f")
-		)
-		(pad "2" thru_hole oval
-			(at 0 2.54)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 57 "unconnected-(U2-GND-Pad2)")
-			(pinfunction "GND")
-			(pintype "input")
-			(uuid "c23283fd-9249-4d70-8a08-545d7d16e25a")
-		)
-		(pad "3" thru_hole oval
-			(at 0 5.08)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 53 "unconnected-(U2-SCL-Pad3)")
-			(pinfunction "SCL")
-			(pintype "input")
-			(uuid "1edda260-d99e-4f76-9b37-12c973795439")
-		)
-		(pad "4" thru_hole oval
-			(at 0 7.62)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 55 "unconnected-(U2-SDA-Pad4)")
-			(pinfunction "SDA")
-			(pintype "input")
-			(uuid "9ada2894-6a03-4987-9b1f-764eaac146ad")
-		)
-		(pad "5" thru_hole oval
-			(at 0 10.16)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 58 "unconnected-(U2-XDA-Pad5)")
-			(pinfunction "XDA")
-			(pintype "input")
-			(uuid "dd45aedd-62b4-4ea0-a6ae-90e1c1b804aa")
-		)
-		(pad "6" thru_hole oval
-			(at 0 12.7)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 51 "unconnected-(U2-XCL-Pad6)")
-			(pinfunction "XCL")
-			(pintype "input")
-			(uuid "04605073-854a-4c6f-8b6f-066f362fe519")
-		)
-		(pad "7" thru_hole oval
-			(at 0 15.24)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 54 "unconnected-(U2-ADO-Pad7)")
-			(pinfunction "ADO")
-			(pintype "input")
-			(uuid "72e69189-643f-4b37-80db-82cccc50983d")
-		)
-		(pad "8" thru_hole oval
-			(at 0 17.78)
-			(size 1.7 1.7)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 56 "unconnected-(U2-INT-Pad8)")
-			(pinfunction "INT")
-			(pintype "input")
-			(uuid "9e253b34-6308-4e19-b3dd-d123f107ec24")
-		)
-		(embedded_fonts no)
-	)
 	(footprint "Resistor_SMD:R_1206_3216Metric"
 		(layer "F.Cu")
 		(uuid "96ac9cff-483b-4b77-aa78-b6039d20fa91")
@@ -1203,11 +1063,11 @@
 	(footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 		(layer "F.Cu")
 		(uuid "975384c6-23a0-48d7-b1be-69f7d9562483")
-		(at 53.4575 44.41)
+		(at 119 54.25 -90)
 		(descr "113004U 1130A6S 11300DR 1130A8G 1130081 1130A5R 1130AP5 1130AST  D1130C3W D1130C1B D1130C3C D1130C2P Potentiometer, vertical, Alps RK09K Single, https://tech.alpsalpine.com/prod/e/pdf/potentiometer/rotarypotentiometers/rk09k/rk09k.pdf")
 		(tags "Potentiometer vertical Alps RK09K RK09D Single Snapin")
 		(property "Reference" "RV2"
-			(at 6.05 -5.15 0)
+			(at 6.05 -5.15 90)
 			(layer "F.SilkS")
 			(uuid "0a206daf-421c-4c44-8048-81bfa14ad6f0")
 			(effects
@@ -1218,7 +1078,7 @@
 			)
 		)
 		(property "Value" "R_Potentiometer_Small"
-			(at 6.05 10.15 0)
+			(at 6.05 10.15 90)
 			(layer "F.Fab")
 			(uuid "c2e1cba3-fcec-4ecf-9afc-0bee211ab519")
 			(effects
@@ -1229,7 +1089,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1242,7 +1102,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1259,6 +1119,56 @@
 		(sheetname "/")
 		(sheetfile "RC_v2_ESP32.kicad_sch")
 		(attr through_hole)
+		(fp_line
+			(start 0.88 7.52)
+			(end 4.817 7.52)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4dc54073-7844-4550-9d05-9ce5022c50e4")
+		)
+		(fp_line
+			(start 9.184 7.52)
+			(end 13.12 7.52)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f62dda96-29d3-454a-9f07-7262eaeb9f03")
+		)
+		(fp_line
+			(start 0.88 5.87)
+			(end 0.88 7.52)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fba6a254-7f8b-46ad-add6-f4c7bb9ada7d")
+		)
+		(fp_line
+			(start 0.88 3.371)
+			(end 0.88 4.13)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a0561a06-9de4-4324-a085-dfd259125a21")
+		)
+		(fp_line
+			(start 0.88 1.25)
+			(end 0.88 1.63)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e46d6c1c-88c9-487a-8d51-7690448be81e")
+		)
 		(fp_line
 			(start 0.88 -2.521)
 			(end 0.88 -1.2)
@@ -1280,46 +1190,6 @@
 			(uuid "6caeb829-dc3c-4fac-be02-cefc38eb7ceb")
 		)
 		(fp_line
-			(start 0.88 1.25)
-			(end 0.88 1.63)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e46d6c1c-88c9-487a-8d51-7690448be81e")
-		)
-		(fp_line
-			(start 0.88 3.371)
-			(end 0.88 4.13)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a0561a06-9de4-4324-a085-dfd259125a21")
-		)
-		(fp_line
-			(start 0.88 5.87)
-			(end 0.88 7.52)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "fba6a254-7f8b-46ad-add6-f4c7bb9ada7d")
-		)
-		(fp_line
-			(start 0.88 7.52)
-			(end 4.817 7.52)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "4dc54073-7844-4550-9d05-9ce5022c50e4")
-		)
-		(fp_line
 			(start 9.184 -2.521)
 			(end 13.12 -2.521)
 			(stroke
@@ -1328,16 +1198,6 @@
 			)
 			(layer "F.SilkS")
 			(uuid "a3698798-fd9f-4bf4-bb2b-f6c35dfbcad4")
-		)
-		(fp_line
-			(start 9.184 7.52)
-			(end 13.12 7.52)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "f62dda96-29d3-454a-9f07-7262eaeb9f03")
 		)
 		(fp_line
 			(start 13.12 -2.521)
@@ -1350,16 +1210,6 @@
 			(uuid "e0b57b2d-0125-4006-9a4e-90a2d2fcc9e3")
 		)
 		(fp_line
-			(start -1.15 -4.15)
-			(end -1.15 9.15)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "220e1abc-deac-4078-bd3c-2aebacdf0c26")
-		)
-		(fp_line
 			(start -1.15 9.15)
 			(end 13.25 9.15)
 			(stroke
@@ -1368,16 +1218,6 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "4f95d68b-09b1-4e4a-8cd3-9c8fb5f1c3cc")
-		)
-		(fp_line
-			(start 13.25 -4.15)
-			(end -1.15 -4.15)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "0f764d47-e5c0-494d-8e9a-6205d266245b")
 		)
 		(fp_line
 			(start 13.25 9.15)
@@ -1390,14 +1230,24 @@
 			(uuid "90e759a2-2a4b-4602-a4ba-e77415708410")
 		)
 		(fp_line
-			(start 1 -2.4)
-			(end 1 7.4)
+			(start -1.15 -4.15)
+			(end -1.15 9.15)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "f33ce1d4-b3b8-4bf2-bb7a-a37c8e6fd203")
+			(layer "F.CrtYd")
+			(uuid "220e1abc-deac-4078-bd3c-2aebacdf0c26")
+		)
+		(fp_line
+			(start 13.25 -4.15)
+			(end -1.15 -4.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "0f764d47-e5c0-494d-8e9a-6205d266245b")
 		)
 		(fp_line
 			(start 1 7.4)
@@ -1410,16 +1260,6 @@
 			(uuid "34742f4b-67b2-4638-9c42-be85525c5158")
 		)
 		(fp_line
-			(start 13 -2.4)
-			(end 1 -2.4)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "83a8e236-14f3-414d-90e0-95e06f8c3153")
-		)
-		(fp_line
 			(start 13 7.4)
 			(end 13 -2.4)
 			(stroke
@@ -1428,6 +1268,26 @@
 			)
 			(layer "F.Fab")
 			(uuid "f2e4b458-5a73-47e7-b6a7-6b7068183e39")
+		)
+		(fp_line
+			(start 1 -2.4)
+			(end 1 7.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "f33ce1d4-b3b8-4bf2-bb7a-a37c8e6fd203")
+		)
+		(fp_line
+			(start 13 -2.4)
+			(end 1 -2.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "83a8e236-14f3-414d-90e0-95e06f8c3153")
 		)
 		(fp_circle
 			(center 7.5 2.5)
@@ -1441,7 +1301,7 @@
 			(uuid "7d2f91c9-8ff5-4e7d-a7a7-927dcfa414a5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2 2.5 90)
+			(at 2 2.5 0)
 			(layer "F.Fab")
 			(uuid "c86723bf-132c-4d90-8aff-b5a0a0f70420")
 			(effects
@@ -1452,7 +1312,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 270)
 			(size 1.8 1.8)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -1463,7 +1323,7 @@
 			(uuid "99a64fad-9da8-4c55-8a36-f962c820f5f8")
 		)
 		(pad "2" thru_hole circle
-			(at 0 2.5)
+			(at 0 2.5 270)
 			(size 1.8 1.8)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -1474,7 +1334,7 @@
 			(uuid "629ef56d-eca5-491f-80ee-7ef0c7b59c26")
 		)
 		(pad "3" thru_hole circle
-			(at 0 5)
+			(at 0 5 270)
 			(size 1.8 1.8)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -1485,7 +1345,7 @@
 			(uuid "dbcb3669-f53b-40ca-a4e5-530396d4add0")
 		)
 		(pad "MP" thru_hole roundrect
-			(at 7 -1.9)
+			(at 7 -1.9 270)
 			(size 4 3)
 			(drill oval 2.1 1.8)
 			(layers "*.Cu" "*.Mask")
@@ -1494,7 +1354,7 @@
 			(uuid "c434b9de-c0d0-4f43-921b-cc7a60710fdc")
 		)
 		(pad "MP" thru_hole roundrect
-			(at 7 6.9)
+			(at 7 6.9 270)
 			(size 4 3)
 			(drill oval 2.1 1.8)
 			(layers "*.Cu" "*.Mask")
@@ -3366,7 +3226,7 @@
 	(footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 		(layer "F.Cu")
 		(uuid "e2029be9-8bf6-4937-b760-4e158b078757")
-		(at 87.5 57.45 -90)
+		(at 118.5 93.45 -90)
 		(descr "113004U 1130A6S 11300DR 1130A8G 1130081 1130A5R 1130AP5 1130AST  D1130C3W D1130C1B D1130C3C D1130C2P Potentiometer, vertical, Alps RK09K Single, https://tech.alpsalpine.com/prod/e/pdf/potentiometer/rotarypotentiometers/rk09k/rk09k.pdf")
 		(tags "Potentiometer vertical Alps RK09K RK09D Single Snapin")
 		(property "Reference" "RV1"
@@ -4163,7 +4023,7 @@
 	(footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 		(layer "F.Cu")
 		(uuid "fa430576-92ea-4526-ba68-a8de726aa6d7")
-		(at 61.6 59.5 -90)
+		(at 118.4 74.15 -90)
 		(descr "113004U 1130A6S 11300DR 1130A8G 1130081 1130A5R 1130AP5 1130AST  D1130C3W D1130C1B D1130C3C D1130C2P Potentiometer, vertical, Alps RK09K Single, https://tech.alpsalpine.com/prod/e/pdf/potentiometer/rotarypotentiometers/rk09k/rk09k.pdf")
 		(tags "Potentiometer vertical Alps RK09K RK09D Single Snapin")
 		(property "Reference" "RV3"
