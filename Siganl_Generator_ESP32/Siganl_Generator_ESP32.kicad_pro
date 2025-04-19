@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 1.0,
+          "height": 2.286,
+          "width": 2.286
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -222,8 +222,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.7,
-          "drill": 0.3
+          "diameter": 0.8,
+          "drill": 0.5
         }
       ],
       "zones_allow_external_fillets": false
@@ -630,6 +630,10 @@
     [
       "269d3247-8a6b-4ff7-9eda-ec3c9220b104",
       "Root"
+    ],
+    [
+      "c2520d76-939c-41f6-9cdb-209cddeb5b2a",
+      "USB-C"
     ]
   ],
   "text_variables": {}
