@@ -611,6 +611,14 @@
     [
       "237ccd5f-fc9a-401d-8d0b-daa8f412d965",
       "Root"
+    ],
+    [
+      "cd79ea4d-be74-4e4d-aca7-7ae1aae51bf7",
+      "Sensoric"
+    ],
+    [
+      "cb035252-5fb2-4641-bdef-dc1d4d7ecd86",
+      "Power"
     ]
   ],
   "text_variables": {}
